@@ -18,13 +18,13 @@ class App extends Component {
 
     /* Scroll screen to section */
     scrollToSection = (section) => {
-        if (section == "AboutMe") {
+        if (section === "AboutMe") {
             this.aboutMeLocation.current.scrollIntoView( {behavior: "smooth", block: "center", inline: "center"} );
-        } else if (section == "Education") {
+        } else if (section === "Education") {
             this.educationLocation.current.scrollIntoView( {behavior: "smooth", block: "center", inline: "nearest"} );
-        } else if (section == "Projects") {
+        } else if (section === "Projects") {
             this.projectsLocation.current.scrollIntoView( {behavior: "smooth", block: "center", inline: "nearest"} );
-        } else if (section == "Contact") {
+        } else if (section === "Contact") {
             this.contactLocation.current.scrollIntoView( {behavior: "smooth", block: "center", inline: "nearest"} );
         }
     }
