@@ -1,27 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import HighRollerScreenShotMobile from './../../images/ProjectsImages/HighRollerTitleScreenShot_mobile.png';
 import BlenderIconMobile from './../../images/ProjectsImages/BlenderIcon_mobile.png';
 import Unity3DIconMobile from './../../images/ProjectsImages/Unity3DIcon_mobile.png';
-import CSharpIconMobile from './../../images/ProjectsImages/CSharpIcon_mobile.png';
 import MuseScoreIconMobile from './../../images/ProjectsImages/MuseScoreIcon_mobile.png';
-import classNames from 'classnames';
-
-
-var blenderClasses = classNames( /* Assigns multiple classnames to element */
-    'blender', 'bot_row'
-);
-
-var unityClasses = classNames(
-    'unity', 'top_row'
-);
-
-var cSharpClasses = classNames(
-    'csharp', 'top_row'
-);
-
-var museScoreClasses = classNames(
-    'musescore', 'bot_row'
-);
 
 const Projects = React.forwardRef((props, ref) =>
     <section className="content_section" ref={ref}>
@@ -36,7 +17,7 @@ const Projects = React.forwardRef((props, ref) =>
             </div>
             <div className="game_route_container">
                 <img src={ HighRollerScreenShotMobile } alt="" />
-                <p><a className="game_link" href="https://mstypulk.github.io/HighRoller/" target="_blank">Play the Game!</a></p>
+                <p><a className="game_link" href="https://mstypulk.github.io/HighRoller/" target="_blank" rel="noopener noreferrer">Play the Game!</a></p>
                 <p className="side_note">Note: Game cannot be played on mobile devices.</p>
             </div>
         </div>
@@ -54,10 +35,18 @@ const Projects = React.forwardRef((props, ref) =>
                 </ul>
             </div>
             <div className="icon_container">
-                <img className={ unityClasses } src={ Unity3DIconMobile } alt="" />
-                <img className={ cSharpClasses } src={ CSharpIconMobile } alt="" />
-                <img className={ blenderClasses } src={ BlenderIconMobile } alt="" />
-                <img className={ museScoreClasses } src={ MuseScoreIconMobile } alt="" />
+                <div className='icon'>
+                    <img className='unity' src={ Unity3DIconMobile } alt="" />
+                    <p className='used_for'>Game Engine</p>
+                </div>
+                <div className='icon'>
+                    <img className='blender' src={ BlenderIconMobile } alt="" />
+                    <p className='used_for'>3D Modeling</p>
+                </div>
+                <div className='icon'>
+                    <img className='musescore' src={ MuseScoreIconMobile } alt="" />
+                    <p className='used_for'>Background Music</p>
+                </div>
             </div>
         </div>
     </section>
