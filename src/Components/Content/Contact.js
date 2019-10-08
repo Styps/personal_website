@@ -1,15 +1,21 @@
-import React, { Component } from 'react';
-import LinkedInIconMobile from './../../images/ContactImages/linkedIn-icon-mobile.png';
-import GithubIconMobile from './../../images/ContactImages/github_icon_mobile.png';
+import React from 'react';
 
 const Contact = React.forwardRef((props, ref) =>
     <section className="content_section" ref={ref}>
         <h2 className="content_header">Contact Me</h2>
         <div className="contact_content">
-            <p align="center">I'd Love to Hear From You!</p>
-            <a href="https://www.linkedin.com/in/matthew-stypulkoski-88bb6b112/" target="_blank"><img className="linkedin_icon" src={ LinkedInIconMobile } alt="" /></a>
-            <a href="mailto:matt.stypulkoski@gmail.com"><i class="far fa-envelope"></i></a>
-            <a href="https://github.com/mstypulk" target="_blank"><img className="github_icon" src={ GithubIconMobile } alt="" /></a>
+            <div className="contact_link_container">
+                <a href="https://www.linkedin.com/in/matthew-stypulkoski-88bb6b112/" className="contact_icon" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                <p>View my career so far</p>
+            </div>
+            <div className="contact_link_container">
+                <a href="mailto:matt.stypulkoski@gmail.com" className="contact_icon"><i class="fas fa-envelope"></i></a>
+                <p>I'd love you hear from you!</p>
+            </div>
+            <div className="contact_link_container">
+                <a href="https://github.com/Matt-Stypulkoski" className="contact_icon" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                <p>Take a look at my past projects</p>
+            </div>
         </div>
     </section>
 );
