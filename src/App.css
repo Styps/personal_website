@@ -534,9 +534,7 @@
     .education_content .education_text {
         font-size: 18px;
         width: 80%;
-        margin-left: auto;
-        margin-right: auto; /* Center text */
-        clear: both; /* Move text underneath floating image. Clear doesnt allow this element to have objects float to both left or right side. */
+        clear: both; /* Move text underneath floating image. Clear doesn't allow this element to have objects float to both left or right side. */
     }
 }
 
@@ -610,6 +608,7 @@
     margin-right: auto; /* Center header */
     margin-left: auto;
     font-size: 18px;
+    margin-top: 0px;
 }
 
 .projects_summary {
@@ -621,6 +620,7 @@
     min-width: 299px;
     margin-right: auto; /* Center container */
     margin-left: auto;
+    margin-top: 75px;
 }
 
 .technologies_used_container .summary_header {
@@ -631,19 +631,36 @@
     font-size: 13px;
     margin-top: 5px;
     list-style: none;
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 .technologies_used_container li:before {
-    content: "\f0ad"; /* Add Wrench Font Awesome icon before each list element */
-    font-family: "Font Awesome 5 Free";
     padding-right: 5px;
     font-weight: 900; /* Some fa icons will not render if this is not set */
 }
 
 .icon_container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.icon {
+
+}
+
+.icon img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.used_for {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.unity {
+    height: 50px  /* Need to edit image to have same height dimension as other icons*/
 }
 
 @media only screen and (min-width: 600px) {
@@ -669,7 +686,7 @@
         display: flex;
         float: right;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+
         flex-basis: 50%;
     }
 
@@ -728,18 +745,11 @@
 
     .unity{ /* Change picture to larger version */
             content: url('./images/ProjectsImages/Unity3DIcon.png');
-    }
-
-    .csharp { /* Change picture to larger version */
-            content: url('./images/ProjectsImages/CSharpIcon.png');
+            height: 67px; /* Need to edit image to have same height dimension as other icons*/
     }
 
     .musescore { /* Change picture to larger version */
             content: url('./images/ProjectsImages/MuseScoreIcon.png');
-    }
-
-    .technologies_used_container {
-        margin-top: 35px;
     }
 
     .technologies_used_container li {
@@ -754,7 +764,7 @@
     .projects_content {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .summary_header {
@@ -796,7 +806,7 @@
         display: flex;
         float: right;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+
         flex-basis: 50%;
 
     }
@@ -814,10 +824,9 @@
     }
 
     .technologies_used_container {
-        margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .side_note {
@@ -853,6 +862,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -862,10 +874,6 @@
     margin-top: 0;
 }
 
-.far {
-    font-size: 65px;
-    color: navy;
-}
 
 .contact_content a {
     text-decoration: none; /* Remove underline from link */
@@ -874,7 +882,32 @@
 
 .contact_content img {
     object-fit: none; /* Dont adjust image resolution to fit container */
+}
 
+.contact_link_container {
+    flex-basis: 100%;
+    display: flex;
+    width: 60%;
+    padding-bottom: 10px;
+}
+
+.contact_link_container p{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 5%
+
+}
+
+.contact_icon i {
+    font-size: 25px;
+}
+
+.contact_icon .fa-github {
+    color: black;
+}
+
+.contact_icon .fa-envelope {
+    color: navy;
 }
 
 @media only screen and (min-width: 768px) {
@@ -883,16 +916,8 @@
         font-size: 18px;
     }
 
-    .linkedin_icon { /* Change picture to larger version */
-        content: url('./images/ContactImages/linkedIn-icon-768px.png');
-    }
-
-    .github_icon { /* Change picture to larger version */
-        content: url('./images/ContactImages/github_icon_768px.png');
-    }
-
-    .far {
-        font-size: 81.25px;
+    .contact_icon i {
+        font-size: 50px;
     }
 }
 
@@ -901,36 +926,12 @@
     .contact_content p {
         font-size: 22px;
     }
-
-    .linkedin_icon { /* Change picture to larger version */
-        content: url('./images/ContactImages/linkedIn-icon-1024px.png');
-    }
-
-    .github_icon { /* Change picture to larger version */
-        content: url('./images/ContactImages/github_icon_1024px.png');
-    }
-
-    .far {
-        font-size: 101.5px;
-    }
 }
 
 @media only screen and (min-width: 1440px) {
 
     .contact_content p {
         font-size: 26px;
-    }
-
-    .linkedin_icon { /* Change picture to larger version */
-        content: url('./images/ContactImages/linkedIn-icon.png');
-    }
-
-    .github_icon { /* Change picture to larger version */
-        content: url('./images/ContactImages/github_icon.png');
-    }
-
-    .far {
-        font-size: 126.875px;
     }
 }
 
